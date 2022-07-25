@@ -210,6 +210,47 @@ int main()
 //	return 0;
 //}
 
+
+//3.)3.   do while（）循环
+//do语句的语法//至少执行一次
+//    do
+//       循环语句；
+//    whiel(表达式)；
+
+//int main()
+//{
+//	int i = 0;
+//	do
+//	{
+//		if (i == 5)
+//			//break;//打破当前区块
+//			continue;//死循环，continue会跳过本次循环后面的代码{}区域，
+//		            //来到判断部分while部分，再来到do语句，造成死循环
+//	printf("%d\n", i);
+//	i++;
+//	}
+//	while (i <= 10);//符合时执行do语句，不符合是不执行do语句
+//	return 0;
+//}
+
+//练习1.
+//int main()
+//{
+//	int i = 2;
+//	while (i != 1)
+//	{
+//		if (i == 64)
+//		{
+//			return 0;
+//		}
+//		i *= 2;
+//		printf("%d\n", i);
+//		continue;
+//	}
+//	return 0;
+//}
+//2.！n的代码(阶乘)
+
  
  //2).2.switch语句，专门实现多分支结构 
 //int main() 
