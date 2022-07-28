@@ -357,6 +357,63 @@ int main()
 //	return 0;
 //}
 
+
+//题目3.在一个有序数组中查找一个数
+//#include<stdio.h>
+//int main()
+//{
+//	int arr  [] = { 1,2,3,4,5,6,7,8,9,100 };
+//	
+//	int k = 17;
+//	//写一个代码，再arr数组（有序的）中找到7
+//	int i = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	for (i = 0; i < sz; i++)
+//	{
+//		if (k == arr[i])
+//		{
+//			printf("找到了，下标是：%d\n", i);
+//			break;
+//		}
+//	}
+//	if (i == sz)
+//	{
+//		printf("找不到");
+//	}
+//	return 0;
+//}但不够高效
+//折半查找算法、二分查找算法，复杂度也就是查找最多次数：log以2为底的n,而原始算符的复杂度为n
+#include<stdio.h>
+int main()
+{
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int left = 0;
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	int right = sz - 1;
+	int mid = (left + right) / 2;
+	int f = 7;
+	while (left<=right)
+	{
+		if (f > arr[mid])
+		{
+			left = mid + 1;
+		}
+		else if (f < arr[mid])
+		{
+			right = mid - 1;
+		}
+		else
+		{
+			printf("找到目标函数，下标为：%d\n", mid);
+			break;
+		}
+	}
+	if(left>right)
+		{
+		printf("找不到\n");
+	        }
+	return 0;
+}
  
  //2).2.switch语句，专门实现多分支结构 
 //int main() 
