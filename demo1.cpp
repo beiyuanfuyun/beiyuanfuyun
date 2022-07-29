@@ -414,6 +414,65 @@ int main()
 	        }
 	return 0;
 }
+//练习4.//welcome to bit ！！！
+	//####################上面的字符将下面的字符给逐步代替
+//#include<stdio.h>
+//#include<math.h>
+//#include<string.h>
+//#include<windows.h>
+//#include<stdlib.h>
+//int main()
+//{
+//	//welcome to bit ！！！
+//	//####################上面的字符将下面的字符给逐步代替
+//	char arr1[] = "welcome to bit!!!!";
+//	char arr2[] = "##################";
+//	int left = 0;
+//	//int right = sizeof(arr1) / sizeof(arr1[0]) - 2;//这里减2是因为在上述字符串中的最后一个字符其实是\0，
+//		//举个例子：char arr[]="abc",字符数a, b ,c,\0,分别对应的下标为0，1，2，3为四个数，
+//	//则我们要得到最后一个！为总数-2 ,太麻烦了换一个函数
+//	int right = strlen(arr1)-1;//strlen函数遇0停止
+//	printf("%d\n", strlen(arr1));
+//	while(left<=right)
+//	{
+//	  arr2[left] = arr1[left];
+//	  arr2[right] = arr1[right];
+//	  printf("%s\n", arr2);
+//	  //休息一秒对应的头文件为include<windows.h>
+//	  Sleep(1000);//单位为毫秒
+//	  system("cls");//执行系统命令的一个函数system,cls-清空屏幕，对应的头文件为：include<stdlib.h>
+//	  left++;
+//	  right--;
+//	}
+//	return 0;
+//}
+//练习5.
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	int i = 0;
+//	
+//	char arr[10] = { 0 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("请输入密码：\n");
+//		scanf_s("%s", arr);
+//		if (strcmp(arr, "12345") == 0)//==不呢个用来判断两个字符串是否相等，应该使用一个库函数-strcmp-头文件-include<string.h>
+//		{
+//			printf("登陆成功\n");
+//			break;
+//		}
+//		else
+//		printf("密码错误，请重试");
+//	}
+//	if (i == 3)
+//	{
+//		printf("三次登录都失败，请退出程序");
+//	}
+//	return 0;
+//}//该函数出现问题，以后更改
  
  //2).2.switch语句，专门实现多分支结构 
 //int main() 
