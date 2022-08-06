@@ -473,6 +473,214 @@ int main()
 //	}
 //	return 0;
 //}//该函数出现问题，以后更改
+//作业三.
+//从大到小输出三个数
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	scanf_s("%d%d%d", &a, &b, &c);
+//	//在里面如果要加入特殊字符则在输入时也要加上特殊字符符合形式尽量不加
+//	if (a < b)
+//	{
+//		int d = a;
+//		a = b;
+//		b = d;
+//	}
+//	if (a < c)
+//	{
+//		int e = a;
+//		a = c;
+//		c = e;
+//	}
+//	if (b < c)
+//	{
+//		int f = b;
+//		b = c;
+//		c = f;
+//	}
+//	printf("%d  %d  %d\n", a, b, c);
+//	return 0;
+//}
+//练习二
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		while (i % 3 == 0)
+//		{
+//			printf("%d  ", i);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+//练习四求两个数的最大公约数
+//算法：辗转相除法
+//#include<stdio.h>
+//int main()
+//{
+//	int m = 32;
+//	int n = 8;
+//	int r = 0;
+//	scanf_s("%d%d",&m,&n);
+//	while(r=m % n)
+//	{
+//		//r = m % n;
+//		m = n;
+//		n = r;
+//	}
+//	printf("%d\n", n);
+//	return 0;
+//}
+//练习五：打印闰年
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int year = 0;
+//	int count = 0;
+//	for (year = 1000; year <= 2000; year++)
+//		//闰年的判断规则
+//		//1.能被4整除不能被100整除
+//		//2.能被400整除
+//	{
+//		/*if (year % 4 == 0 && year%100 != 0)
+//		{
+//			printf("%d\n", year);
+//			count++;
+//		}
+//		else if (year % 400 == 0)
+//		{
+//			printf("%d\n", year);
+//			count++;
+//		}*/
+//		if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)//简化代码
+//		{
+//			printf("%d  ", year);
+//			count++;
+//		}
+//
+//	}
+//	printf("count=%d\n", count);
+//	return 0;
+//}
+//练习六：判断素数
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		//判断i是否为素数
+//		//素数的判断规则
+//		//1.试除法
+//		int j = 0;
+//		for (j = 2; j < i; j++)
+//		{
+//			printf("j=%d\n", j);//这里为验证101为素数将生成2——101个数，有些浪费算力，改善如下
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (i==j)
+//		{
+//			printf("%d为素数\n", i);
+//			count++;
+//		}
+//		
+//	}
+//	printf("count=%d\n", count);
+//	return 0;
+//}
+//改善算法
+//i=a*b,a和b里面至少有一个数字是小于等于开平方的i
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 100; i < 200; i++)
+//	{
+//		int j = 0;
+//		for (j = 2; j <= sqrt(i); j++)//sqrt开平方的数学函数
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (j > sqrt(i))
+//		{
+//			printf("%d\n", i);
+//			count++;
+//		}
+//	}
+//	printf("count=%d", count);
+//	return 0;
+//}
+//再优化
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	int count = 0;
+//	int i = 0;
+//	for (i = 101; i < 200; i += 2)
+//	{
+//		int j = 0;
+//		for (j = 3; j <= sqrt(i); j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				break;
+//			}
+//		}
+//		if (j > sqrt(i))
+//		{
+//			count++;
+//			printf("%d\n", i);
+//		}
+//	}
+//	printf("count=%d\n", count);
+//	return 0;
+//}
+////文章：素数求解的n种境界，建议看看
+
+//统计：1-100的所有含9的数字
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int count = 0;
+//	for (i = 1; i <= 100; i++)
+//	{
+//		if (i % 10 == 9)
+//		{
+//			count++;
+//		}
+//		if (i / 10 == 9)
+//		{
+//			count++;
+//		}
+//		if (i % 10 == 9 && i / 10 == 9)
+//		{
+//			count--;
+//		}
+//	}
+//	printf("count=%d\n", count);
+//	return 0;
+//}
+//练习7.
+//相加分子
+
  
  //2).2.switch语句，专门实现多分支结构 
 //int main() 
